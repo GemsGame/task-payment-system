@@ -1,7 +1,7 @@
-import { Imessage } from "./Interfaces";
-export class TransferService {
-  constructor() {}
+import { Imessage } from "../interfaces/Imessage";
 
+export class TransferService {
+  
   public fromTo(from: any, to: any, amount: bigint): Imessage {
     if (from.balance >= amount) {
       from.balance -= amount;

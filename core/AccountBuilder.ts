@@ -1,14 +1,6 @@
-/**
- * Интерфейс юзер аккаунта
- *
- * @prop info информация о пользователе
- * @interface
- */
-
-import { IAccount } from "./Interfaces";
+import { IAccount } from "../interfaces/IAccount";
 
 export class AccountBuilder {
-  constructor() {}
   /**
    * Создает новый аккаунт пользователя по имени, фамилии, и дню рождения
    *

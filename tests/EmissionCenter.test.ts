@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { describe } from "mocha";
-import { EmissionCenter } from "../src/EmissionCenter.js";
+import { EmissionCenter } from "../core/EmissionCenter.js";
 
 describe("Add balance to the government wallet", () => {
   it("Should return 1n amount", () => {

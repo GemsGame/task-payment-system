@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { describe } from "mocha";
-import { AccountBuilder } from "../src/AccountBuilder.js";
+import { AccountBuilder } from "../core/AccountBuilder.js";
 
 describe("Generate a new account", () => {
   it("Should return a new user object", () => {

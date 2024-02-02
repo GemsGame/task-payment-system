@@ -1,19 +1,6 @@
-/**
- * Интерфейс мастер аккаунта
- *
- * @prop iban
- * @prop баланс
- * @prop активный или нет
- * @interface
- */
+import { Imessage } from "../interfaces/Imessage";
+import { IEmissionCenter } from "../interfaces/IEmissionCenter";
 
-import { Imessage } from "./Interfaces";
-
-export interface IEmissionCenter {
-  iban: string;
-  balance: bigint;
-  active: boolean;
-}
 
 export class EmissionCenter {
   public government: IEmissionCenter;
