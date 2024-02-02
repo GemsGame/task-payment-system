@@ -7,7 +7,7 @@
  * @interface
  */
 
-import { Imessage } from "./TransferService";
+import { Imessage } from "./Interfaces";
 
 export interface IEmissionCenter {
   iban: string;

@@ -1,6 +1,7 @@
-import { AccountBuilder, IAccount } from "./AccountBuilder.js";
+import { AccountBuilder } from "./AccountBuilder.js";
 import { EmissionCenter } from "./EmissionCenter.js";
-import { Imessage, TransferService } from "./TransferService.js";
+import { TransferService } from "./TransferService.js";
+import { Imessage, IAccount } from "./Interfaces.js";
 
 class MainNetwork {
   emission: EmissionCenter;

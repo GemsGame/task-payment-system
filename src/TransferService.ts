@@ -1,7 +1,4 @@
-export interface Imessage {
-  message: string;
-}
-
+import { Imessage } from "./Interfaces";
 export class TransferService {
   constructor() {}
 

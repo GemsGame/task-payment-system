@@ -5,15 +5,7 @@
  * @interface
  */
 
-import { IEmissionCenter } from "./EmissionCenter";
-
-export interface IAccount extends IEmissionCenter {
-  info: {
-    fistName: string;
-    lastName: string;
-    birthday: bigint;
-  };
-}
+import { IAccount } from "./Interfaces";
 
 export class AccountBuilder {
   constructor() {}
