@@ -1,10 +1,10 @@
 import { expect } from "chai";
 import { describe } from "mocha";
-import { Account } from "../src/Account.js";
+import { AccountBuilder } from "../src/AccountBuilder.js";
 
-describe("Account class tests", () => {
+describe("Generate a new account", () => {
   it("Should return a new user object", () => {
-    const account = new Account();
+    const account = new AccountBuilder();
     const user = account.generateNewAccount(
       "Maxim",
       "Soloviev",
@@ -14,7 +14,7 @@ describe("Account class tests", () => {
     expect(user).to.be.an("object");
   });
   it("Should return a new user account with IBAN", () => {
-    const account = new Account();
+    const account = new AccountBuilder();
     const user = account.generateNewAccount(
       "Maxim",
       "Soloviev",
@@ -24,7 +24,7 @@ describe("Account class tests", () => {
     expect(user.iban).to.has.length(21);
   });
   it("Should return a new user with name 'Maxim'", () => {
-    const account = new Account();
+    const account = new AccountBuilder();
     const user = account.generateNewAccount(
       "Maxim",
       "Soloviev",

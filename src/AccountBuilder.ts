@@ -5,9 +5,9 @@
  * @interface
  */
 
-import { IEmission } from "./Emission";
+import { IEmissionCenter } from "./EmissionCenter";
 
-export interface IAccount extends IEmission {
+export interface IAccount extends IEmissionCenter {
   info: {
     fistName: string;
     lastName: string;
@@ -15,7 +15,7 @@ export interface IAccount extends IEmission {
   };
 }
 
-export class Account {
+export class AccountBuilder {
   constructor() {}
   /**
    * Создает новый аккаунт пользователя по имени, фамилии, и дню рождения
@@ -35,6 +35,7 @@ export class Account {
     return {
       iban: this.generateIban(bankCode),
       balance: BigInt(0),
+      active: true,
       info: {
         fistName,
         lastName,
