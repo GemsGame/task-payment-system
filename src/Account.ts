@@ -1,19 +1,17 @@
 /**
- * Интерфейс аккаунта
+ * Интерфейс юзер аккаунта
  *
- * @prop iban 
- * @prop balance баланс
  * @prop info информация о пользователе
  * @interface
  */
 
-export interface IAccount {
-  iban: string;
-  balance: BigInt;
+import { IEmission } from "./Emission";
+
+export interface IAccount extends IEmission {
   info: {
     fistName: string;
     lastName: string;
-    birthday: BigInt;
+    birthday: bigint;
   };
 }
 
@@ -31,7 +29,7 @@ export class Account {
   public generateNewAccount(
     fistName: string,
     lastName: string,
-    birthday: BigInt,
+    birthday: bigint,
     bankCode: string
   ): IAccount {
     return {
