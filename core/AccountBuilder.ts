@@ -10,7 +10,7 @@ export class AccountBuilder {
    * @returns возвращает новый аккаунт
    * @public
    */
-  public generateNewAccount(
+  public generate(
     fistName: string,
     lastName: string,
     birthday: bigint,

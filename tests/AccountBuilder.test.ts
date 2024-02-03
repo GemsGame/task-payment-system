@@ -5,7 +5,7 @@ import { AccountBuilder } from "../core/AccountBuilder.js";
 describe("Generate a new account", () => {
   it("Should return a new user object", () => {
     const account = new AccountBuilder();
-    const user = account.generateNewAccount(
+    const user = account.generate(
       "Maxim",
       "Soloviev",
       BigInt(Date.now()),
@@ -15,7 +15,7 @@ describe("Generate a new account", () => {
   });
   it("Should return a new user account with IBAN", () => {
     const account = new AccountBuilder();
-    const user = account.generateNewAccount(
+    const user = account.generate(
       "Maxim",
       "Soloviev",
       BigInt(Date.now()),
@@ -25,7 +25,7 @@ describe("Generate a new account", () => {
   });
   it("Should return a new user with name 'Maxim'", () => {
     const account = new AccountBuilder();
-    const user = account.generateNewAccount(
+    const user = account.generate(
       "Maxim",
       "Soloviev",
       BigInt(Date.now()),

@@ -1,5 +1,6 @@
-import { Imessage } from "../interfaces/Imessage";
+
 import { IEmissionCenter } from "../interfaces/IEmissionCenter";
+import { IMessage } from "../interfaces/IMessage";
 
 
 export class EmissionCenter {
@@ -19,30 +20,18 @@ export class EmissionCenter {
       active: true,
     };
   }
-
-  /**
-   * @returns адрес эмиссии
-   */
-  get govAddress() {
-    return this.government;
-  }
-  /**
-   * @returns адрес уничтожения
-   */
-  get destAddress() {
-    return this.destraction;
-  }
   /**
    * @param amount добавить нужное количество руб
+   * @returns message
    */
-  public add(amount: bigint): Imessage {
+  public add(amount: bigint): IMessage {
     this.government.balance += amount;
     return { message: "balance increased" };
   }
   /**
    * @param amount удалить нужное количеств руб
    */
-  public remove(amount: bigint): Imessage {
+  public remove(amount: bigint): IMessage {
     if (this.government.balance >= amount) {
       this.government.balance -= amount;
       this.destraction.balance += amount;
