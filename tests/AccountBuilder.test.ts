@@ -9,7 +9,8 @@ describe("Generate a new account", () => {
       "Maxim",
       "Soloviev",
       BigInt(Date.now()),
-      "CBDC"
+      "CBDC",
+      true
     );
     expect(user).to.be.an("object");
   });
@@ -19,7 +20,8 @@ describe("Generate a new account", () => {
       "Maxim",
       "Soloviev",
       BigInt(Date.now()),
-      "CBDC"
+      "CBDC",
+      true
     );
     expect(user.iban).to.has.length(21);
   });
@@ -29,7 +31,8 @@ describe("Generate a new account", () => {
       "Maxim",
       "Soloviev",
       BigInt(Date.now()),
-      "CBDC"
+      "CBDC",
+      true
     );
     expect(user.info.fistName).to.be.equal("Maxim");
   });

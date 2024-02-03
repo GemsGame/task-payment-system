@@ -8,16 +8,18 @@ describe("Add new user account to the Network", () => {
     const account = new AccountBuilder();
     const users = new UsersNetwork();
     users.add(
-      account.generate("Maxim", "Soloviev", BigInt(Date.now()), "CBDC")
+      account.generate("Maxim", "Soloviev", BigInt(Date.now()), "CBDC", true)
     );
     expect(users.accounts).to.have.lengthOf(1);
   });
+});
 
+describe("Return data in JSON", () => {
   it("Should return JSON with user accounts", () => {
     const account = new AccountBuilder();
     const users = new UsersNetwork();
     users.add(
-      account.generate("Maxim", "Soloviev", BigInt(Date.now()), "CBDC")
+      account.generate("Maxim", "Soloviev", BigInt(Date.now()), "CBDC", true)
     );
 
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#use_within_json

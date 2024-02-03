@@ -14,12 +14,13 @@ export class AccountBuilder {
     fistName: string,
     lastName: string,
     birthday: bigint,
-    bankCode: string
+    bankCode: string,
+    active: boolean,
   ): IAccount {
     return {
       iban: this.generateIban(bankCode),
       balance: BigInt(0),
-      active: true,
+      active,
       info: {
         fistName,
         lastName,
