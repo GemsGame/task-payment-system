@@ -1,29 +1,6 @@
 import { IMessage } from "../interfaces/IMessage";
 import { IAccount } from "../interfaces/IAccount";
-
-/**
- * Тип, представляющий функцию с перегруженными сигнатурами для перевода средств.
- */
-type FromTo = {
-  /**
-   * Перегруженная сигнатура функции с отдельными параметрами.
-   * @param from - Аккаунт отправителя.
-   * @param to - Аккаунт получателя.
-   * @param amount - Сумма для перевода.
-   * @returns Результат операции.
-   */
-  (from: IAccount, to: IAccount, amount: bigint): IMessage;
-  /**
-   * Перегруженная сигнатура функции с объектом данных.
-   * @param data - Объект с данными для перевода.
-   * @param data.f - Аккаунт отправителя.
-   * @param data.t - Аккаунт получателя.
-   * @param data.a - Сумма для перевода.
-   * @returns Результат операции.
-   */
-  (data: { f: IAccount; t: IAccount; a: bigint }): IMessage;
-};
-
+import { FromTo } from "../interfaces/FromTo";
 export class TransferService {
   /**
    * Метод для перевода средств между аккаунтами с использованием функции FromTo.

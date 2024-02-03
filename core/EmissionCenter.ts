@@ -2,7 +2,6 @@
 import { IEmissionCenter } from "../interfaces/IEmissionCenter";
 import { IMessage } from "../interfaces/IMessage";
 
-
 export class EmissionCenter {
   public government: IEmissionCenter;
   public destraction: IEmissionCenter;
@@ -40,5 +39,9 @@ export class EmissionCenter {
     } else {
       throw new Error("The balance less than amount");
     }
+  }
+
+  get accounts () {
+    return [this.government, this.destraction];
   }
 }
