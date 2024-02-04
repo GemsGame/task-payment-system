@@ -1,10 +1,10 @@
 
-import { IEmissionCenter } from "../interfaces/IEmissionCenter";
+import { IEmissionAccount } from "../interfaces/IEmissionAccount";
 import { IMessage } from "../interfaces/IMessage";
 
 export class EmissionCenter {
-  public government: IEmissionCenter;
-  public destraction: IEmissionCenter;
+  public government: IEmissionAccount;
+  public destraction: IEmissionAccount;
 
   constructor() {
     this.government = {
@@ -41,7 +41,7 @@ export class EmissionCenter {
     }
   }
 
-  get accounts () {
+  get accounts() {
     return [this.government, this.destraction];
   }
 }

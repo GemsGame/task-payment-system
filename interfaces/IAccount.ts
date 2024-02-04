@@ -1,4 +1,4 @@
-import { IEmissionCenter } from "./IEmissionCenter";
+import { IEmissionAccount } from "./IEmissionAccount";
 
 /**
  * Интерфейс юзер аккаунта
@@ -7,7 +7,7 @@ import { IEmissionCenter } from "./IEmissionCenter";
  * @interface
  */
 
-export interface IAccount extends IEmissionCenter {
+export interface IAccount extends IEmissionAccount {
   info: {
     fistName: string;
     lastName: string;

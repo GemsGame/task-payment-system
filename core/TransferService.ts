@@ -1,7 +1,7 @@
 import { IMessage } from "../interfaces/IMessage";
 import { IAccount } from "../interfaces/IAccount";
 import { FromTo } from "../interfaces/FromTo";
-import { IEmissionCenter } from "../interfaces/IEmissionCenter";
+import { IEmissionAccount } from "../interfaces/IEmissionAccount";
 export class TransferService {
   /**
    * Метод для перевода средств между аккаунтами с использованием функции FromTo.
@@ -13,8 +13,8 @@ export class TransferService {
   public fromTo: FromTo = (
     fromOrData?:
       | IAccount
-      | IEmissionCenter
-      | { f: IAccount | IEmissionCenter; t: IAccount; a: bigint },
+      | IEmissionAccount
+      | { f: IAccount | IEmissionAccount; t: IAccount; a: bigint },
     to?: IAccount,
     amount?: bigint
   ): IMessage => {
@@ -30,7 +30,6 @@ export class TransferService {
       fromOrData.t.balance += fromOrData.a;
 
       return { message: "Transfer was successful" };
-      
     } else {
       if (fromOrData && to && amount) {
         if (fromOrData.balance < amount) {

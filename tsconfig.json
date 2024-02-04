@@ -9,7 +9,7 @@
   "typedocOptions": {
         "entryPoints": [
           "interfaces/IAccount.ts", 
-          "interfaces/IEmissionCenter.ts",
+          "interfaces/IEmissionAccount.ts",
           "interfaces/IMessage.ts",
           "core/AccountBuilder.ts",
           "core/EmissionCenter.ts",

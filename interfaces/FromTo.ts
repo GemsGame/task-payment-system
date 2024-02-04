@@ -1,6 +1,6 @@
 import { IMessage } from "../interfaces/IMessage";
 import { IAccount } from "../interfaces/IAccount";
-import { IEmissionCenter } from "./IEmissionCenter";
+import { IEmissionAccount } from "./IEmissionAccount";
 /**
  * Тип, представляющий функцию с перегруженными сигнатурами для перевода средств.
  */
@@ -13,7 +13,7 @@ export type FromTo = {
    * @returns Результат операции.
    */
   (from: IAccount, to: IAccount, amount: bigint): IMessage;
-  (from: IEmissionCenter, to: IAccount, amount: bigint): IMessage;
+  (from: IEmissionAccount, to: IAccount, amount: bigint): IMessage;
   /**
    * Перегруженная сигнатура функции с объектом данных.
    * @param data - Объект с данными для перевода.
@@ -23,5 +23,5 @@ export type FromTo = {
    * @returns Результат операции.
    */
   (data: { f: IAccount; t: IAccount; a: bigint }): IMessage;
-  (data: { f: IEmissionCenter; t: IAccount; a: bigint }): IMessage;
+  (data: { f: IEmissionAccount; t: IAccount; a: bigint }): IMessage;
 };

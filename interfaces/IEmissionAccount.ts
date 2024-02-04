@@ -1,6 +1,6 @@
 
 /**
- * Интерфейс центра эмиссии
+ * Интерфейс аккаунтов центра эмиссии
  *
  * @prop iban
  * @prop баланс
@@ -8,7 +8,7 @@
  * @interface
  */
 
-export interface IEmissionCenter {
+export interface IEmissionAccount {
   iban: string;
   balance: bigint;
   active: boolean;
